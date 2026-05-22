@@ -6,7 +6,8 @@
     "node": "22.x"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "tsx scripts/embed-db.ts && next dev",
+    "prebuild": "tsx scripts/embed-db.ts",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
