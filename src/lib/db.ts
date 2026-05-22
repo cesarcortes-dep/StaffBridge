@@ -27,6 +27,5 @@ export function getDb(): Database.Database {
     );
   }
   _db = new Database(TMP_DB_PATH, { readonly: true, fileMustExist: true });
-  _db.pragma("journal_mode = WAL");
   return _db;
 }
