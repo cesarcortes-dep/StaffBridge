@@ -4,7 +4,7 @@ A triage dashboard for property managers to make sense of 500+ multilingual gues
 
 Built for the Premium Propiedades developer exam (Phase 2). The Phase 1 plan lives in [`plan.md`](./plan.md).
 
-**Live demo:** _to be added after deploy_
+**Live demo:** https://staff-bridge-tawny.vercel.app
 
 ---
 
