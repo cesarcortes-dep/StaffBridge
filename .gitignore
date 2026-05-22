@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# SQLite — KEEP reviews.db committed (Vercel deploys what's in the repo).
+# To regenerate: `npm run db:seed && npm run themes:embed && npm run themes:label`.
+/data/reviews.db-journal
+/data/reviews.db-wal
+/data/reviews.db-shm
+
+# Internal notes (not for submission)
+_demo-prep.md
+_build-log.md
+
+# Exam materials (recruiter IP, don't republish)
+EXAM-*.docx
+INSTRUCTIONS-*.docx
