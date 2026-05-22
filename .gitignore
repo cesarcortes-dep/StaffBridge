@@ -40,11 +40,15 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# SQLite — KEEP reviews.db committed (Vercel deploys what's in the repo).
+# SQLite lives in /public so Next.js auto-bundles it on Vercel.
 # To regenerate: `npm run db:seed && npm run themes:embed && npm run themes:label`.
+/data/reviews.db
 /data/reviews.db-journal
 /data/reviews.db-wal
 /data/reviews.db-shm
+/public/reviews.db-journal
+/public/reviews.db-wal
+/public/reviews.db-shm
 
 # Internal notes (not for submission)
 _demo-prep.md

@@ -12,7 +12,7 @@ import { pipeline } from "@huggingface/transformers";
 import path from "node:path";
 
 const ROOT = process.cwd();
-const DB_PATH = path.join(ROOT, "data", "reviews.db");
+const DB_PATH = path.join(ROOT, "public", "reviews.db");
 
 const K = 12;                  // number of clusters
 const BATCH = 16;              // embedding batch size

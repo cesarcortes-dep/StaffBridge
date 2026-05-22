@@ -9,7 +9,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const CSV_PATH = path.join(ROOT, "data", "guest_reviews.csv");
-const DB_PATH = path.join(ROOT, "data", "reviews.db");
+const DB_PATH = path.join(ROOT, "public", "reviews.db");
 
 function intOrNull(v: string): number | null {
   if (v === "" || v == null) return null;

@@ -17,7 +17,7 @@ import path from "node:path";
 import fs from "node:fs";
 
 const ROOT = process.cwd();
-const DB_PATH = path.join(ROOT, "data", "reviews.db");
+const DB_PATH = path.join(ROOT, "public", "reviews.db");
 
 // Load .env.local manually (Next loads it for the app, but tsx scripts don't).
 function loadDotEnvLocal() {
