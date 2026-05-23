@@ -54,8 +54,8 @@ export function getPortfolioKpis(f: Filters): PortfolioKpis {
     .get(...params) as {
       total: number;
       avg_overall: number | null;
-      answered: number;
-      unanswered: number;
+      answered: number | null;
+      unanswered: number | null;
     };
 
   // Median latency (days) over answered reviews matching filters.
@@ -78,12 +78,15 @@ export function getPortfolioKpis(f: Filters): PortfolioKpis {
         ? days[(days.length - 1) / 2]
         : (days[days.length / 2 - 1] + days[days.length / 2]) / 2;
 
+  const answered = base.answered ?? 0;
+  const unanswered = base.unanswered ?? 0;
+
   return {
     totalReviews: base.total,
     avgOverall: base.avg_overall ?? 0,
-    responseRate: base.total === 0 ? 0 : base.answered / base.total,
+    responseRate: base.total === 0 ? 0 : answered / base.total,
     medianResponseLatencyDays: median,
-    unansweredCount: base.unanswered,
+    unansweredCount: unanswered,
   };
 }
 

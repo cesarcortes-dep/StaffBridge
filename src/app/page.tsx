@@ -35,6 +35,14 @@ export default async function Home({
         <FilterBar />
       </section>
 
+      {kpis.totalReviews === 0 ? (
+        <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+          No reviews match the current filters. The dataset runs from
+          2024-11-07 to 2026-05-01 — try widening the date range or removing a
+          filter.
+        </div>
+      ) : null}
+
       <KpiStrip kpis={kpis} />
 
       <MonthlyTrend data={trend} />
