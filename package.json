@@ -13,7 +13,8 @@
     "lint": "eslint",
     "db:seed": "tsx scripts/seed-db.ts",
     "themes:embed": "tsx scripts/embed-and-cluster.ts",
-    "themes:label": "tsx scripts/label-clusters.ts"
+    "themes:label": "tsx scripts/label-clusters.ts",
+    "verify": "tsx scripts/verify-number.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.98.0",
